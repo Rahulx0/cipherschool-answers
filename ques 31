@@ -1,0 +1,128 @@
+q1 Create a Person class with name and age, and a derived Employee class with employee ID and salary. 
+ans) public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Employee extends Person {
+    private int employeeId;
+    private double salary;
+
+    public Employee(String name, int age, int employeeId, double salary) {
+        super(name, age);
+        this.employeeId = employeeId;
+        this.salary = salary;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp = new Employee("Alice", 30, 101, 55000.0);
+        System.out.println("Name: " + emp.getName());
+        System.out.println("Age: " + emp.getAge());
+        System.out.println("Employee ID: " + emp.getEmployeeId());
+        System.out.println("Salary: " + emp.getSalary());
+    }
+}
+
+
+q2 Create an Employeeobject and print all details.
+ans) public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Employee extends Person {
+    private int employeeId;
+    private double salary;
+
+    public Employee(String name, int age, int employeeId, double salary) {
+        super(name, age);
+        this.employeeId = employeeId;
+        this.salary = salary;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp = new Employee("Alice", 30, 101, 55000.0);
+        System.out.println("Name: " + emp.getName());
+        System.out.println("Age: " + emp.getAge());
+        System.out.println("Employee ID: " + emp.getEmployeeId());
+        System.out.println("Salary: " + emp.getSalary());
+    }
+}
+
+q3 Create a Vehicle base class with a start() method. Inherit Car and Bike classes, each overriding start(). Call start()on both.
+
+ans) public class Vehicle {
+    public void start() {
+        System.out.println("Vehicle is starting");
+    }
+}
+
+public class Car extends Vehicle {
+    @Override
+    public void start() {
+        System.out.println("Car is starting");
+    }
+}
+
+public class Bike extends Vehicle {
+    @Override
+    public void start() {
+        System.out.println("Bike is starting");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car();
+        Bike bike = new Bike();
+
+        car.start();  
+        bike.start(); 
+    }
+}
